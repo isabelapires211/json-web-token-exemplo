@@ -41,11 +41,20 @@ app.post('/logar', (req, res) => {
   let senha=  req.body.senha
   
     if (usuario === "isabela@pires" && senha === "1234"){
-     res.send("o usuario esta cadastrado") }
-  else{
-    res.send("o usuario não foi possivel logar")
+    const id= 1 
+    const token= jwt.sign({id}, process.env.SECRET, {
+      expiresIn: 300
+    }) 
+  
+    res.cookie('logar', token, {httpOlin: true});
+    return res.json ({
+      usuario: usuario, 
+      token: token
+    })
   }
 
+  res.status(500).json ({mensagem: "Não foi possivei logar"})
+  
 })
 
 app.post('/deslogar', function(req, res) {
