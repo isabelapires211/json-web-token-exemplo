@@ -37,7 +37,15 @@ app.get('/', async function(req, res){
 })
 
 app.post('/logar', (req, res) => {
-  res.send("Você esta logado")
+  let usuario = req.body.usuario
+  let senha=  req.body.senha
+  
+    if (usuario === "isabela@pires" && senha === "1234"){
+     res.send("o usuario esta cadastrado") }
+  else{
+    res.send("o usuario não foi possivel logar")
+  }
+
 })
 
 app.post('/deslogar', function(req, res) {
