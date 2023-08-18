@@ -31,6 +31,16 @@ app.get('/usuario/cadastrar', async function(req, res){
   res.render('cadastrar');
 })
 
+app.post('/usuario/cadastrar', async function(req, res){
+
+if (req.body.senha === req.body.confirmeS)
+      res.json({mensagem:"conseguiu"})
+    else(
+      res.json({mensagem:"vc não conseguiu"})
+    )} ) 
+
+
+    
 app.get('/autenticar', async function(req, res){
   res.render('autenticar');
 })
@@ -38,6 +48,8 @@ app.get('/autenticar', async function(req, res){
 app.get('/', async function(req, res){
   res.render("home")
 })
+
+
 
 app.post('/logar', (req, res) => {
   let usuario = req.body.usuario

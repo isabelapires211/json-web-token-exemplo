@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="page">
-        <form method="POST" class="formLogin" action="/logar">
+        <form method="post" class="formLogin" action="/usuario/cadastrar">
             <h1>Cadastrar</h1>
             <p>Digite os seus dados de acesso.</p>
             <label for="email">Nome</label>
@@ -20,9 +20,9 @@
             <label for="password">Senha</label>
             <input type="password" name="senha" placeholder="Digite sua senha" />
             <label for="password">Confirma senha</label>
-            <input type="password" name="senha" placeholder="Digite sua senha" />
+            <input type="password" name="confirmeS" placeholder="confirme sua senha" />
             <a href="/">Esqueci minha senha</a>
-            <input type="submit" value="Entrar" class="btn" />
+            <input type="submit" value="Entrar" class="btn" action="/usuario/cadastrar"/>
         </form>-
     </div>
 </body>
