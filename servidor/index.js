@@ -9,6 +9,16 @@ var cookieParser = require('cookie-parser')
 const express = require('express');
 const { usuario } = require('./models');
 
+app.post('/usuarios/adicionar', async function(req, res){
+  try {
+      await usuario.create(req.body);
+      res.redirect('/usuarios/listar')
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Ocorreu um erro ao criar o usuário.' });
+  }
+})
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -31,6 +41,10 @@ app.get('/usuario/cadastrar', async function(req, res){
   res.render('cadastrar');
 })
 
+app.get('/usuario/listar', async function(req, res){
+  res.render('listar');
+})
+
 app.post('/usuario/cadastrar', async function(req, res){
 
 if (req.body.senha === req.body.confirmeS)
@@ -38,8 +52,6 @@ if (req.body.senha === req.body.confirmeS)
     else(
       res.json({mensagem:"vc não conseguiu"})
     )} ) 
-
-
     
 app.get('/autenticar', async function(req, res){
   res.render('autenticar');
