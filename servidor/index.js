@@ -9,15 +9,15 @@ var cookieParser = require('cookie-parser')
 const express = require('express');
 const { usuario } = require('./models');
 
-app.post('/usuarios/adicionar', async function(req, res){
-  try {
-      await usuario.create(req.body);
-      res.redirect('/usuarios/listar')
-  } catch (err) {
-      console.error(err);
-      res.status(500).json({ message: 'Ocorreu um erro ao criar o usuário.' });
-  }
-})
+app.post('/usuario/cadastrar', async function(req, res){
+  if(req.body.senha === req.body.confirmeS){
+  await usuario.create(req.body)
+
+  res.json("cadastro foi feito")}
+  else{
+    res.status(500).json("senha incorreta")
+}})
+
 
 const app = express();
 
