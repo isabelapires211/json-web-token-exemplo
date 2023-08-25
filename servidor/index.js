@@ -10,19 +10,17 @@ const express = require('express');
 const { usuario } = require('./models');
 
 app.post('/usuario/cadastrar', async function(req, res){
-  if(req.body.senha === req.body.confirmeS){
+  try{
   await usuario.create(req.body)
   res.redirect("/usuario/listar")
-
-  res.json("cadastro foi feito")}
-  else{
-    res.status(500).json("senha incorreta")
+} catch(err){
+  res.status(500).json({mensagem: 'ocorreu erro ao autenticar'})
 }})
 
 app.get('/usuario/listar', async function(req, res){
   try{
     var usuarios = await usuario.findAll();
-    res.render('home', {usuarios})
+    res.render('listar', {usuarios})
   } catch(err){
     console.error(err);
     res.status(500).json({mensagem: 'ocorreu erro ao autenticar'})
