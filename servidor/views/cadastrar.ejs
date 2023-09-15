@@ -13,15 +13,15 @@
         <form method="post" class="formLogin" action="/usuario/cadastrar">
             <h1>Cadastrar</h1>
             <p>Digite os seus dados de acesso.</p>
-            <label for="email">Nome</label>
-            <input type="email" name="nome" placeholder="Digite seu e-mail" autofocus="true"  />
-            <label for="password">Senha</label>
-            <input type="password" name="senha" placeholder="Digite sua senha" />
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" />
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" />
             <label for="password">Confirma senha</label>
             <input type="password" name="confirmeS" placeholder="confirme sua senha" />
             <a href="/">Esqueci minha senha</a>
             <input type="submit" value="Entrar" class="btn" action="/usuario/cadastrar"/>
-        </form>-
+        </form>
     </div>
 </body>
 </html>
