@@ -55,13 +55,7 @@ app.get('/usuario/listar', async function(req, res){
   }
 })
 
-app.post('/usuario/cadastrar', async function(req, res){
-
-if (req.body.senha === req.body.confirmeS)
-      res.json({mensagem:"conseguiu"})
-    else(
-      res.json({mensagem:"vc não conseguiu"})
-    )} ) 
+ 
     
 app.get('/autenticar', async function(req, res){
   res.render('autenticar');
@@ -74,7 +68,7 @@ app.post('/usuario/cadastrar', async function(req, res){
   await usuario.create(req.body)
   res.redirect("/usuario/listar")
 } catch(err){
-  res.status(500).json({mensagem: 'ocorreu erro ao autenticar'})
+  res.status(500).json({mensagem: 'ocorreu erro ao cadastrar'})
 }})
 
 
