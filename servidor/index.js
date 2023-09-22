@@ -31,7 +31,7 @@ app.use(
     secret: process.env.SECRET,
     algorithms: ["HS256"],
     getToken: req => req.cookies.token
-  }).unless({ path: ["/autenticar", "/logar", "/deslogar", "/usuario/cadastrar", "/usuario/listar"] })
+  }).unless({ path: ["/autenticar", "/logar", "/deslogar"] })
 );
 
 app.get('/', async function(req, res){
@@ -43,7 +43,9 @@ app.get('/usuario/cadastrar', async function(req, res){
   res.render('cadastrar');
 })
 
-
+app.get('/autenticar', async function(req, res){
+  res.render('autenticar');
+})
 
 app.get('/usuario/listar', async function(req, res){
   try{
@@ -56,27 +58,22 @@ app.get('/usuario/listar', async function(req, res){
 })
 
  
-    
-app.get('/autenticar', async function(req, res){
-  res.render('autenticar');
-})
-
-
 
 app.post('/usuario/cadastrar', async function(req, res){
   try{
-  await usuario.create(req.body)
-  res.redirect("/usuario/listar")
+  if(req.body.senha == req.body.csenha){
+
+  await usuario.create(usuario)
+  res.redirect("/usuario/listar")}
 } catch(err){
+  console.log(err)
   res.status(500).json({mensagem: 'ocorreu erro ao cadastrar'})
 }})
 
 
 
-
-
 app.post('/logar', (req, res) => {
-  let usuario = req.body.usuario
+  let usuario = req.body.nome
   let senha=  req.body.senha
   
     if (usuario === "isabela@pires" && senha === "1234"){
@@ -85,7 +82,7 @@ app.post('/logar', (req, res) => {
       expiresIn: 300
     }) 
   
-    res.cookie('logar', token, {httpOlin: true});
+    res.cookie('token', token, {httpOlin: true});
     return res.json ({
       usuario: usuario, 
       token: token
