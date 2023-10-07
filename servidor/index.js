@@ -57,19 +57,17 @@ app.get('/usuario/listar', async function(req, res){
   }
 })
 
- 
-
 app.post('/usuario/cadastrar', async function(req, res){
-  try{
-  if(req.body.senha == req.body.csenha){
-
-  await usuario.create(usuario)
-  res.redirect("/usuario/listar")}
-} catch(err){
-  console.log(err)
-  res.status(500).json({mensagem: 'ocorreu erro ao cadastrar'})
-}})
-
+  try {
+     await usuario.create(usuario);
+      res.redirect('listar/listar')
+     
+  } catch (err) {
+      console.error(err.message);
+      res.status(500).json({ message: 'Ocorreu um erro ao criar o usuário.' });
+      
+  }
+})
 
 
 app.post('/logar', (req, res) => {
