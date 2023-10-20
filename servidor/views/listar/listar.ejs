@@ -9,8 +9,8 @@
 <body>
   <form method="get" action="/usuario/listar">
     <% usuarios.forEach((usuario) => { %>
-      <%= usuario.senha %>
-        <%= usuario.nome %>
+      <%= usuario.nome %>
+      <%= usuario.senha %>   
     <% }) %>
   </form>
 </body>

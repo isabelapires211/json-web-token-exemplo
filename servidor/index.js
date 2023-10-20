@@ -59,7 +59,11 @@ app.get('/usuario/listar', async function(req, res){
 
 app.post('/usuario/cadastrar', async function(req, res){
   if(req.body.senha == req.body.confirmeS){
-   await usuario.create(req.body);
+
+    let produto = req.body
+    produto.senha= crypto.encrypt(req.body.senha)
+
+    await usuario.create(produto);
     res.redirect('listar')
 
   }
@@ -70,11 +74,12 @@ app.post('/usuario/cadastrar', async function(req, res){
 })
 
 
-app.post('/logar', (req, res) => {
-  let usuario = req.body.nome
-  let senha=  req.body.senha
+app.post('/logar', async (req, res) => {
+
+  const nome = await usuario.findOne({ where: { nome: req.body.nome, senha: crypto.encrypt(  req.body.senha) } });
   
-    if (usuario === "isabela@pires" && senha === "1234"){
+    if (nome){
+      
     const id= 1 
     const token= jwt.sign({id}, process.env.SECRET, {
       expiresIn: 300
