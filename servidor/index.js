@@ -58,12 +58,12 @@ app.get('/usuario/listar', async function(req, res){
 })
 
 app.post('/usuario/cadastrar', async function(req, res){
-  try {
-     await usuario.create(usuario);
-      res.redirect('listar/listar')
-     
-  } catch (err) {
-      console.error(err.message);
+  if(req.body.senha == req.body.confirmeS){
+   await usuario.create(req.body);
+    res.redirect('listar')
+
+  }
+  else  {
       res.status(500).json({ message: 'Ocorreu um erro ao criar o usuário.' });
       
   }
