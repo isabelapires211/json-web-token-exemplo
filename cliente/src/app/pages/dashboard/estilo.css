@@ -1,0 +1,64 @@
+/* Add your CSS classes and styles here */
+div {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for Suspense fallback */
+  .Suspense-fallback {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Style for ListUsers component (adjust as needed) */
+  .ListUsers {
+    margin-top: 20px;
+  }
+  
+  .ListUsers__item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for links */
+  .links {
+    margin-top: 20px;
+  }
+  
+  .links__link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .links__link:hover {
+    text-decoration: underline;
+  }
+  

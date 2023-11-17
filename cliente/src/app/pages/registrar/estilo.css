@@ -1,0 +1,69 @@
+
+div {
+
+    text-align: center;
+    margin-top: 20px;
+   
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for ToastContainer (React Toastify) */
+  .Toastify__toast-container {
+    z-index: 9999;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .Toastify__toast {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  
+  .Toastify__toast--error {
+    background-color: #f7f6f6;
+    color: #0c0c0c;
+  }
+  
+  .Toastify__close-button {
+    color: #ca1414;
+  }
+  

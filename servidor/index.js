@@ -8,7 +8,20 @@ console.log(decrypted_key);
 require("dotenv-safe").config();
 const jwt = require('jsonwebtoken');
 var { expressjwt: expressJWT } = require("express-jwt");
-const cors = require('cors');
+const cors = require('cors'); //liberaçao do cliente ligação
+
+//metodos que o cliente pode executar, e pode acessar 
+const corsOpcoes = { 
+  origin: "http://localhost:3000",
+  methods: "GET,PUT,POST,DELET",
+
+  allowedHeaders: "Content-type,Autherizantion",
+  credential:true
+
+}
+
+
+
 
 var cookieParser = require('cookie-parser')
 
@@ -17,9 +30,9 @@ const { usuario } = require('./models');
 
 const app = express();
 
-app.set('view engine', 'ejs');
+app.use(cors(corsOpcoes) )
 
-app.use(cors());
+app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
@@ -50,7 +63,7 @@ app.get('/autenticar', async function(req, res){
 app.get('/usuario/listar', async function(req, res){
   try{
     var usuarios = await usuario.findAll();
-    res.render('listar/listar', {usuarios})
+    res.json({usuarios})
   } catch(err){
     console.error(err);
     res.status(500).json({mensagem: 'ocorreu erro ao autenticar'})
@@ -85,14 +98,19 @@ app.post('/logar', async (req, res) => {
       expiresIn: 300
     }) 
   
-    res.cookie('token', token, {httpOlin: true});
-    return res.json ({
+    res.cookie('token', token, {httpOlin: true}).json({
+      nome: nome.nome,
+      token: token
+    });
+
+  }
+   /* return res.json ({
       usuario: usuario, 
       token: token
     })
   }
 
-  res.status(500).json ({mensagem: "Não foi possivei logar"})
+  //res.status(500).json ({mensagem: "Não foi possivei logar"})*/
   
 })
 
