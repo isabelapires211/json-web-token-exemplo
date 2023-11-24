@@ -89,7 +89,7 @@ app.post('/usuario/cadastrar', async function(req, res){
 
 app.post('/logar', async (req, res) => {
 
-  const nome = await usuario.findOne({ where: { nome: req.body.nome, senha: crypto.encrypt(  req.body.senha) } });
+  const nome = await usuario.findOne({ where: { nome: req.body.name, senha: crypto.encrypt(  req.body.password) } });
   
     if (nome){
       
@@ -99,7 +99,7 @@ app.post('/logar', async (req, res) => {
     }) 
   
     res.cookie('token', token, {httpOlin: true}).json({
-      nome: nome.nome,
+      name: nome.nome,
       token: token
     });
 
@@ -125,6 +125,6 @@ app.post('/deslogar', function(req, res) {
   res.json ({ deslogado:true})
 })
 
-app.listen(4000, function() {
+app.listen(3000, function() {
   console.log('App de Exemplo escutando na porta 3000!')
 });

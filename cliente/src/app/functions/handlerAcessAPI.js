@@ -1,11 +1,11 @@
 'use server'
 
 
-const url = "https://trabalho-final-tau.vercel.app"
+const url = "http://localhost:3000/"
 
 
 const getUserAuthenticated = async (user) => {
-    const responseOfApi = await fetch(url +"/user/authenticated",
+    const responseOfApi = await fetch(url +"/logar",
     {
        cache:"no-cache",
        method:"POST",
