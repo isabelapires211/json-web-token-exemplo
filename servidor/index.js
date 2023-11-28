@@ -20,9 +20,6 @@ const corsOpcoes = {
 
 }
 
-
-
-
 var cookieParser = require('cookie-parser')
 
 const express = require('express');
@@ -103,10 +100,6 @@ app.post('/logar', async (req, res) => {
       token: token
     });
 
-    return res.json(resgistro)
-
- 
-
   }
    /* return res.json ({
       usuario: usuario, 
@@ -125,6 +118,6 @@ app.post('/deslogar', function(req, res) {
   res.json ({ deslogado:true})
 })
 
-app.listen(3000, function() {
-  console.log('App de Exemplo escutando na porta 3000!')
+app.listen(3001, function() {
+  console.log('App de Exemplo escutando na porta 3001!')
 });
