@@ -1,20 +1,30 @@
-/* Estilos CSS para o formulário de login com tema de loja de maquiagem */
-.tudo{
-  background-image: url(https://i.pinimg.com/564x/eb/0d/57/eb0d575f975d07e453af59999d426a41.jpg);
+.tudo {
+  background-image: url(https://i.pinimg.com/564x/39/12/5a/39125a818e9007e870cb89cfbef857cf.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .div {
-  max-width: 400px;
+  max-width: 600px;
+  /* Defina um valor apropriado para a largura máxima do formulário */
   margin: 0 auto;
   background-image: url(https://i.pinimg.com/564x/08/da/f7/08daf7a75aa48c97b32b4e0f58a0e173.jpg);
+  background-repeat: no-repeat;
   border-radius: 8px;
-  padding: 20px;
+  padding: 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.8; /* Define a opacidade da imagem de fundo */
 }
+
 
 h1 {
   text-align: center;
-  color: #e44d26; /* Cor destacada */
+  color: #e44d26;
 }
 
 form {
@@ -42,7 +52,8 @@ button {
 }
 
 button:hover {
-  background-color: #bf3c20; /* Cor destacada mais escura no hover */
+  background-color: #bf3c20;
+  /* Cor destacada mais escura no hover */
 }
 
 .Toastify__toast-container {
