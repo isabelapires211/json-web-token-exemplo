@@ -8,6 +8,7 @@ export default async function Dashboard() {
   return(
     <div>
         <Suspense fallback={<p>carregando...</p>}>
+          
             <ListUsers users={users}/>
 
             <a href="/pages/alterar">Alterar</a>

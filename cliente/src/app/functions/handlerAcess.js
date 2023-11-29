@@ -8,6 +8,8 @@ const handlerAcessUser = async (user) => {
     
     const isTokenValidate = await validateToken(userAuth.token);
 
+    //console.log(isTokenValidate)
+
     if (isTokenValidate) {
         Cookies.set('token', userAuth.token, { expires: 1 });
         if( typeof window !== 'undefined'){

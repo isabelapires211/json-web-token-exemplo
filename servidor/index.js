@@ -41,7 +41,7 @@ app.use(
     secret: process.env.SECRET,
     algorithms: ["HS256"],
     getToken: req => req.cookies.token
-  }).unless({ path: ["/autenticar", "/logar", "/deslogar" ] })
+  }).unless({ path: ["/autenticar", "/logar", "/deslogar"] })
 );
 
 app.get('/', async function(req, res){
@@ -60,7 +60,7 @@ app.get('/autenticar', async function(req, res){
 app.get('/usuario/listar', async function(req, res){
   try{
     var usuarios = await usuario.findAll();
-    res.json({usuarios})
+    res.json(usuarios)
   } catch(err){
     console.error(err);
     res.status(500).json({mensagem: 'ocorreu erro ao autenticar'})
@@ -68,7 +68,7 @@ app.get('/usuario/listar', async function(req, res){
 })
 
 app.post('/usuario/cadastrar', async function(req, res){
-  if(req.body.senha == req.body.confirmeS){
+  if(req.body.senha == req.body.confirmaSenha){
 
     let produto = req.body
     produto.senha= crypto.encrypt(req.body.senha)
@@ -95,20 +95,20 @@ app.post('/logar', async (req, res) => {
       expiresIn: 300
     }) 
   
-    res.cookie('token', token, {httpOlin: true}).json({
+    return res.cookie('token', token, {httpOlin: true}).json({
       name: nome.nome,
       token: token
     });
 
   }
-   /* return res.json ({
-      usuario: usuario, 
-      token: token
-    })
-  }*/
+   /*return res.json ({
+       name: nome.nome, 
+       token: token
+     })*/
 
 
-  res.status(500).json ({mensagem: "Não foi possivei logar"})
+
+  //res.status(500).json ({mensagem: "Não foi possivei logar"})
   
 })
 

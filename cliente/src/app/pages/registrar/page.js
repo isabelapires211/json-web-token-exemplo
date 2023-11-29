@@ -8,15 +8,16 @@ import { useRouter } from 'next/navigation';
 
 export default function Register(){
   const [user, setUser] =useState({
-    name:'',
-    email: '',
-    password: ''
+    nome:'',
+    senha: '',
+    confirmaSenha: ''
   });
 
   const {push} = useRouter();
 
   const handlerFormSubmit = async (event) => {
     event.preventDefault();
+
 
     try{
       await postUser(user);
@@ -33,18 +34,18 @@ export default function Register(){
         <form onSubmit={handlerFormSubmit}>
         <input
           placeholder='Nome'
-          type="name"
-          onChange={(e) => { setUser({ ...user, name: e.target.value }) }}>
-        </input>
-        <input
-          placeholder='E-mail'
-          type="email"
-          onChange={(e) => { setUser({ ...user, email: e.target.value }) }}>
+          type="nome"
+          onChange={(e) => { setUser({ ...user, nome: e.target.value }) }}>
         </input>
         <input
           placeholder='Senha'
-          type='password'
-          onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
+          type="password"
+          onChange={(e) => { setUser({ ...user, senha: e.target.value }) }}>
+        </input>
+        <input
+          placeholder='Confirma'
+          type='confirmaSenha'
+          onChange={(e) => { setUser({ ...user, confirmaSenha: e.target.value }) }}>
         </input>
           <button>Cadastrar</button>
           <ToastContainer/>
