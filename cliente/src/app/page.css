@@ -1,73 +1,52 @@
+/* Estilos CSS para o formulário de login com tema de loja de maquiagem */
+.tudo{
+  background-image: url(https://i.pinimg.com/564x/eb/0d/57/eb0d575f975d07e453af59999d426a41.jpg);
+  background-repeat: no-repeat;
+}
+.div {
+  max-width: 400px;
+  margin: 0 auto;
+  background-image: url(https://i.pinimg.com/564x/08/da/f7/08daf7a75aa48c97b32b4e0f58a0e173.jpg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-div {
-    background-color: #ffffff;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  h1 {
-    font-size: 32px;
-    font-family: Georgia, Times New Roman, Times, 'serif';
-    text-align: center;
+h1 {
+  text-align: center;
+  color: #e44d26; /* Cor destacada */
+}
 
-    margin: 40px;
-    margin-top: 40px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    
-    width: 300px;
-    margin: 0 auto;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-    
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 0px; 
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;  
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  
-  /* Style for ToastContainer (React Toastify) */
-  .Toastify__toast-container {
-    z-index: 9999;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-  }
-  
-  .Toastify__toast {
-    font-size: 16px;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-top: 10px;
-  }
-  
-  .Toastify__toast--error {
-    background-color: #edf0f5;
-    color: #030303;
-  }
-  
-  .Toastify__close-button {
-    color: #c81e1e;
-  }
-  
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e44d26;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bf3c20; /* Cor destacada mais escura no hover */
+}
+
+.Toastify__toast-container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}

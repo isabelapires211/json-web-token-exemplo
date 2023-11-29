@@ -28,6 +28,7 @@ export default function Login() {
     }
   };
   return (
+    <div className="tudo">
     <div className="div">
       <h1>Login</h1>
       <form onSubmit={handlerLogin}>
@@ -44,6 +45,7 @@ export default function Login() {
         <button>Entrar</button>
         <ToastContainer/>
       </form>
+    </div>
     </div>
   )
 }
