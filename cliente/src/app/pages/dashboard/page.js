@@ -7,12 +7,21 @@ export default async function Dashboard() {
     const users = await getUsers();
   return(
     <div>
-        <Suspense fallback={<p>carregando...</p>}>
-          
+
+<nav className="navbar">
+        <a href="/pages/alterar">Alterar</a>
+        <a href="/pages/registrar">Registrar</a>
+      </nav>
+        
+        <Suspense fallback={<p className="fallback">carregando...</p>}>
+       
+        <div className="container">
+      
+         
             <ListUsers users={users}/>
 
-            <a href="/pages/alterar">Alterar</a>
-            <a href="/pages/registrar">Registrar</a>
+  
+            </div>
         </Suspense>
      
     </div>

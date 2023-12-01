@@ -1,5 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
 .tudo {
-  background-image: url(https://i.pinimg.com/564x/39/12/5a/39125a818e9007e870cb89cfbef857cf.jpg);
+  background-image: url(https://img.freepik.com/free-vector/gradient-liquid-abstract-background_23-2148922413.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -7,13 +11,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Arial, sans-serif;
 }
 
 .div {
   max-width: 600px;
   /* Defina um valor apropriado para a largura máxima do formulário */
   margin: 0 auto;
-  background-image: url(https://i.pinimg.com/564x/08/da/f7/08daf7a75aa48c97b32b4e0f58a0e173.jpg);
+  background-image: url();
   background-repeat: no-repeat;
   border-radius: 8px;
   padding: 100px;
@@ -34,11 +39,14 @@ form {
 }
 
 input {
+  background-color: rgb(255, 255, 255, 101, 76);
+  color: rgb(0, 0, 0);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  opacity: 0.8;
 }
 
 button {

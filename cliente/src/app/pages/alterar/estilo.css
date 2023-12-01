@@ -1,9 +1,15 @@
-
+ 
 div {
-    background-color: #f4f4f5;
-    text-align: center;
-    margin-top: 20px;
-   
+    background-image: url(https://img.freepik.com/free-vector/gradient-liquid-abstract-background_23-2148922413.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  
   }
   
   h1 {

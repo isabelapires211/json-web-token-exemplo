@@ -1,0 +1,27 @@
+/* Estilo para o container de cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Estilo para os cards de usuário */
+  .card {
+    border: 1px solid #de9595;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 10px;
+    width: 100%; /* 4 cards em cada linha */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  
+    /* Adapte as cores conforme necessário */
+    background-color: #fff;
+  }
+  
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  

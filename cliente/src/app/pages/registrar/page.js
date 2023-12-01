@@ -29,8 +29,11 @@ export default function Register(){
 
 
     return (
-      <div>
+      <div className="tudo">
+          <div>
         <h1>Cadastrar</h1>
+        </div>
+      
         <form onSubmit={handlerFormSubmit}>
         <input
           placeholder='Nome'

@@ -1,64 +1,77 @@
-/* Add your CSS classes and styles here */
-div {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  a:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Style for Suspense fallback */
-  .Suspense-fallback {
-    font-size: 20px;
-    margin-top: 20px;
-  }
-  
-  /* Style for ListUsers component (adjust as needed) */
-  .ListUsers {
-    margin-top: 20px;
-  }
-  
-  .ListUsers__item {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style for links */
-  .links {
-    margin-top: 20px;
-  }
-  
-  .links__link {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    margin: 0 10px;
-    font-size: 16px;
-  }
-  
-  .links__link:hover {
-    text-decoration: underline;
-  }
-  
+/* App.css */
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Estilo para o container geral */
+.container {
+  background-image: url(https://img.freepik.com/free-vector/gradient-liquid-abstract-background_23-2148922413.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo para os cards de usuário */
+.card {
+  border: 1px solid #d0acac;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0.8;
+
+  /* Adapte as cores conforme necessário */
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para os links */
+a {
+  text-decoration: none;
+  color: #007bff; /* Cor do link, pode ser ajustada conforme necessário */
+  margin: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para o fallback */
+.fallback {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+  margin: 20px;
+}

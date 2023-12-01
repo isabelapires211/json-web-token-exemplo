@@ -33,7 +33,7 @@ export default function Login() {
       <h1>Login</h1>
       <form onSubmit={handlerLogin}>
         <input
-          placeholder='name'
+          placeholder=' Name'
           type="name"
           onChange={(e) => { setUser({ ...user, name: e.target.value }) }}>
         </input>

@@ -1,69 +1,78 @@
+/* Seu arquivo CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
 
-div {
+.tudo {
+  background-image: url(https://img.freepik.com/free-vector/gradient-liquid-abstract-background_23-2148922413.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
 
-    text-align: center;
-    margin-top: 20px;
-   
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    margin: 0 auto;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Style for ToastContainer (React Toastify) */
-  .Toastify__toast-container {
-    z-index: 9999;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-  }
-  
-  .Toastify__toast {
-    font-size: 16px;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-top: 10px;
-  }
-  
-  .Toastify__toast--error {
-    background-color: #f7f6f6;
-    color: #0c0c0c;
-  }
-  
-  .Toastify__close-button {
-    color: #ca1414;
-  }
-  
+.div {
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url(); /* Adicione a URL da imagem de fundo se necessário */
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  text-align: center; /* Adicionado para centralizar o texto "Cadastrar" */
+}
+
+h1 {
+  color: #e44d26;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adicionado espaço acima do formulário */
+}
+
+label {
+  margin-top: 10px; /* Adicionado espaço entre as labels e os inputs */
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 100%;
+  opacity: 0.8;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e44d26;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #bf3c20;
+}
+
+.Toastify__toast-container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
