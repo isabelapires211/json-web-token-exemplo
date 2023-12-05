@@ -30,6 +30,7 @@ export default function Register(){
 
     return (
       <div className="tudo">
+ 
           <div>
         <h1>Cadastrar</h1>
         </div>
@@ -54,6 +55,7 @@ export default function Register(){
           <ToastContainer/>
         </form>
       </div>
+  
     )
   }
 

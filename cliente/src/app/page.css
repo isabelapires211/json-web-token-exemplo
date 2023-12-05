@@ -3,7 +3,7 @@
   padding: 0px;
 }
 .tudo {
-  background-image: url(https://img.freepik.com/free-vector/gradient-liquid-abstract-background_23-2148922413.jpg);
+  background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/8968.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,18 +18,19 @@
   max-width: 600px;
   /* Defina um valor apropriado para a largura máxima do formulário */
   margin: 0 auto;
-  background-image: url();
+  background-image: u;
   background-repeat: no-repeat;
   border-radius: 8px;
   padding: 100px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  opacity: 0.8; /* Define a opacidade da imagem de fundo */
+  box-shadow: 2px 2px 2px 2px rgba(92, 41, 146, 0.655);
+  opacity: 0.9; /* Define a opacidade da imagem de fundo */
 }
 
 
 h1 {
   text-align: center;
-  color: #e44d26;
+  color: #e44d26 ;
+  font-size: 40px;
 }
 
 form {
@@ -43,7 +44,7 @@ input {
   color: rgb(0, 0, 0);
   padding: 14px 20px;
   margin: 8px 0;
-  border: none;
+  border: 4px;
   cursor: pointer;
   width: 100%;
   opacity: 0.8;

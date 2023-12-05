@@ -14,11 +14,12 @@ export default async function Dashboard() {
       </nav>
         
         <Suspense fallback={<p className="fallback">carregando...</p>}>
+
        
         <div className="container">
-      
+        <h1 className="h1">Lista de Usuários</h1>
          
-            <ListUsers users={users}/>
+            <div className="lista"><ListUsers users={users}/></div>
 
   
             </div>
